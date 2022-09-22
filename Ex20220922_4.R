@@ -27,9 +27,11 @@ xyplot(lat ~ long | mag1 * depth1, data = quakes, col = c('red','blue'),
 data(iris)
 str(iris)
 
-p <- ggplot(iris,aes(Sepal.Length, Sepal.Width, color = factor(Species), shape = factor(Species)))
+p <- ggplot(iris,aes(Sepal.Length, Sepal.Width, color = Species, shape = Species))
 p + geom_point()
 
+p1 <- ggplot(data = iris, aes(x = Sepal.Length, y = Sepal.Width))
+p1 + geom_point(aes(color = Species, shape = Species))
 
 # 품종별로 Petal.Length(x) 와 Petal.Width(y) 의 관계를 서로 다른 패널에 표시(xyplot 함수 사용)
 
