@@ -163,6 +163,7 @@ pal <- brewer.pal(12,"Paired")
 wordcloud(word, freq,random.order = F, random.color = F, colors = pal, )
 
 # 전입이 많은 지역을 wordcloud 로 표현(시, 군 단위)
+# 1
 data <- read.csv(file.choose(), fileEncoding = "euc-kr", header = T)
 head(data)
 x <- grep("시$", data$행정구역.시군구.별)                   # 시 추출
@@ -186,3 +187,11 @@ word <- data4$행정구역.시군구.별
 freq <- data4$순이동.명.
 freq
 wordcloud(word, freq, random.order = F, random.color = F, colors = pal)
+
+# 2 (df 이용)
+df <- data.frame(지역=word, 빈도수=freq)
+View(df)
+
+install.packages("wordcloud2")
+library(wordcloud2)
+wordcloud2(df)
