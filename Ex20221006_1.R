@@ -298,6 +298,8 @@ X-squared = 6.5447, df = 8, p-value = 0.5865                  # 6.5447 < X^2(8) 
 "
 
 # 12장 연습문제1
+# H0 : 교육수준과 흡연율은 관계가 없다.
+# H1 : 교육수준과 흡연율은 관계가 있다.
 smoke <- read.csv("smoke.csv", header = T)                    # 파일 가져오기
 head(smoke)
 summary(smoke)
@@ -369,6 +371,8 @@ X-squared = 18.911, df = 4, p-value = 0.0008183               # 18.911 > X^2(4) 
 "
 
 # 12장 연습문제2
+# H0 : 나이와 직위는 관련이 없다.
+# H1 : 나이와 직위는 관련이 있다.
 data <- read.csv("cleanData.csv", header = T,                 # 파일 가져오기
                  fileEncoding = "euc-kr")
 head(data)
@@ -448,6 +452,8 @@ X-squared = 287.9, df = 8, p-value < 2.2e-16                  # 287.9 > X^2(8) =
 "
 
 # 12장 연습문제3
+# H0 : 직업 유형에 따른 응답 정도는 차이가 없다.
+# H1 : 직업 유형에 따른 응답 정도는 차이가 있다.
 response <- read.csv("response.csv", header = T)              # 파일 가져오기
 head(response)
 
